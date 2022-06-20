@@ -17,6 +17,8 @@ pages -> index.ejs
 
 ### you can import components with ejs
 
+see [EJS](https://github.com/mde/ejs) repo
+
 ```sh
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +28,8 @@ pages -> index.ejs
 ```
 
 ### so you can use tailwindcss and sass or scss
+
+see [tailwindcss](https://tailwindcss.com/) webpage
 
 ```sh
 scss-> main
@@ -38,6 +42,8 @@ scss-> main
 ```
 
 ## webpack
+
+see [webpack](https://webpack.js.org/) webpage
 
 ### unMinify css
 
