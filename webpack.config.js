@@ -8,6 +8,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const HTMLWbpackPlugin = require("html-webpack-plugin");
 
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+
 module.exports = async ({ mode }) => {
   const isDev = mode === "development" ? true : false;
 
@@ -19,14 +21,6 @@ module.exports = async ({ mode }) => {
       filename: "./script/main.js",
       path: join(__dirname, "build"),
       clean: true,
-    },
-
-    devServer: {
-      // static: {
-      //   directory: join(__dirname + "build"),
-      // },
-      compress: true,
-      port: 3000,
     },
 
     module: {
@@ -79,6 +73,12 @@ module.exports = async ({ mode }) => {
     },
 
     plugins: [
+      new BrowserSyncPlugin({
+        host: "localhost",
+        port: 3000,
+        server: { baseDir: ["build"] },
+        files: "**/*.ejs",
+      }),
       ...(await Glob.sync("pages/**/*.ejs").map((path) => {
         let path1 = path.split("/");
         path1 = path1[path1.length - 1];
