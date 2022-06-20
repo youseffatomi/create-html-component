@@ -1,0 +1,30 @@
+@font-face {
+  font-family: FontWeb;
+  font-style: normal;
+  font-weight: 100;
+  src: url("./../assets/fonts/woff/vazir-Thin.woff") format("woff"),
+    url("./../assets/fonts/ttf/vazir-Thin.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: FontWeb;
+  font-style: normal;
+  font-weight: 300;
+  src: url("./../assets/fonts/woff/vazir-Light.woff") format("woff"),
+    url("./../assets/fonts/ttf/vazir-Light.ttf") format("ttf");
+}
+@font-face {
+  font-family: FontWeb;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./../assets/fonts/woff/vazir-Medium.woff") format("woff"),
+    url("./../assets/fonts/ttf/vazir-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: FontWeb;
+  font-style: normal;
+  font-weight: bold;
+  src: url("./../assets/fonts/woff/vazir-Bold.woff") format("woff"),
+    url("./../assets/fonts/ttf/vazir-Bold.ttf") format("ttf");
+}
