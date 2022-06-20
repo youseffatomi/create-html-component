@@ -83,3 +83,18 @@ fontFamily: {
 },
 
 ```
+
+## Build file
+
+```sh
+npm run build
+```
+
+```sh
+├── style
+├── script
+├── assets
+│   ├── fonts
+│   ├── images
+├── index.html
+```
