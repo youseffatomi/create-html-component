@@ -47,7 +47,7 @@ see [webpack](https://webpack.js.org/) webpage
 
 ### unMinify css
 
-If you want to disable minify csss , you must delete this
+If you want to disable minify css , you must delete this
 
 ```sh
 optimization: {
@@ -60,7 +60,7 @@ optimization: {
 ```sh
 devServer: {
    static: {
-      directory: join(__dirname + `"build"`),
+      directory: join(__dirname + "build"),
    },
 },
 ```
@@ -69,7 +69,7 @@ devServer: {
 
 ```sh
 devServer: {
-   port:`3000`
+   port: 3000
 },
 ```
 
