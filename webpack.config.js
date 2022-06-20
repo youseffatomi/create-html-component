@@ -22,9 +22,9 @@ module.exports = async ({ mode }) => {
     },
 
     devServer: {
-      static: {
-        directory: join(__dirname + "build"),
-      },
+      // static: {
+      //   directory: join(__dirname + "build"),
+      // },
       compress: true,
       port: 3000,
     },

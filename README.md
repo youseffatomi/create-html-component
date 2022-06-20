@@ -58,10 +58,8 @@ optimization: {
 ### change build directory name
 
 ```sh
-devServer: {
-   static: {
-      directory: join(__dirname + "build"),
-   },
+output: {
+   path: join(__dirname, "build"),
 },
 ```
 
