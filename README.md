@@ -66,9 +66,9 @@ output: {
 ### change port serve
 
 ```sh
-devServer: {
-   port: 3000
-},
+new BrowserSyncPlugin({
+   port: 3000,
+})
 ```
 
 ## Tailwindcss
