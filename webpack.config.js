@@ -2,6 +2,8 @@ const { join } = require("path");
 
 const Glob = require("glob");
 
+const { htmlWebpackPluginTemplateCustomizer } = require("template-ejs-loader");
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -9,6 +11,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HTMLWbpackPlugin = require("html-webpack-plugin");
 
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+
+const webpack = require("webpack");
 
 module.exports = async ({ mode }) => {
   const isDev = mode === "development" ? true : false;
@@ -74,23 +78,28 @@ module.exports = async ({ mode }) => {
 
     plugins: [
       new BrowserSyncPlugin({
-        host: "localhost",
         port: 3000,
+        host: "localhost",
+        startPath: "pages",
         server: { baseDir: ["build"] },
-        files: "**/*.ejs",
       }),
       ...(await Glob.sync("pages/**/*.ejs").map((path) => {
-        let path1 = path.split("/");
-        path1 = path1[path1.length - 1];
         return new HTMLWbpackPlugin({
-          template: path,
+          template: htmlWebpackPluginTemplateCustomizer({
+            templatePath: path,
+          }),
           minify: false,
-          filename: path1.replace("ejs", "html"),
+          filename: path.replace("ejs", "html"),
         });
       })),
 
       new MiniCssExtractPlugin({
         filename: "./style/[name].css",
+      }),
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery",
       }),
     ],
   };
