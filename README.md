@@ -27,6 +27,20 @@ see [EJS](https://github.com/mde/ejs) repo
 </html>
 ```
 
+#### note
+
+you can only import file or image from root directory because ejs cannot found file
+
+```sh
+ //===>false
+ <img src="./assets/x.png" />
+```
+
+```sh
+ //===>true
+ <img src="/assets/x.png" />
+```
+
 ### so you can use tailwindcss and sass or scss
 
 see [tailwindcss](https://tailwindcss.com/) webpage
