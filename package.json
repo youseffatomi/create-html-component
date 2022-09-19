@@ -33,5 +33,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/youseffatomi/create-html-component"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.10"
   }
 }
