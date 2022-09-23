@@ -1,0 +1,76 @@
+
+    <% const list = [
+    {
+        "icon": "pin",
+        "text": "آدرس: کرج – جهان شهر – کسری جنوبی – خیابان رازقی، پلاک ۴۰ واحد ۵",
+    },
+    {
+        "icon": "phone-2",
+        "text": "تلفن: ۰۲۶-۳۴۴۶۰۰۷۱  , ۰۲۶-۳۴۴۶۰۰۷۲",
+    },
+    {
+        "icon": "fax",
+        "text": "فکس: ۰۲۶-۳۴۴۶۱۵۸۲",
+    },
+    {
+        "icon": "email",
+        "text": "ایمیل: INFO@HAVA-RAD.COM",
+    },
+    ] %>
+
+
+      <footer class="mt-20">
+
+        <div class="container flex bg-white rounded-5xl px-20 py-7 shadow-search z-10 relative bg-header-pattern bg-left-top bg-no-repeat">
+
+            <div class="w-3/4">
+                <ul class="flex flex-col space-y-4 text-xl text-dark-80">
+                    
+                    <% list.forEach((item) => { %>
+
+                        <li class="flex items-center gap-2">
+                            <%- include("icon", {className: "w-6 h-6 shrink-0 text-dark-50", name: item.icon}) %> 
+                            <span><%= item.text %></span>
+                        </li>
+
+                    <% }) %>
+                </ul>
+            </div>
+            <div class="w-1/4 text-center">
+                <h6 class="font-medium text-xl">شبکه‌های اجتماعی</h6>
+
+                <% const socials = ["instagram", 'telegram', 'whatsapp'] %>
+
+                <ul class="flex items-center justify-center gap-10 mt-5">
+
+                    <% socials.forEach((item) => { %>
+
+                    <li>
+                        <a href="#" class="transition-all duration-300 text-dark-50 hover:text-secondary">
+                            <%- include("icon", {className: "w-10 h-10", name: item}) %> 
+                        </a>
+                    </li>
+                    <% }) %>
+
+                </ul>
+
+                <ul class="flex items-center gap-6 mt-5 justify-center">
+                    <li>
+                        <img src="/assets/images/home/enemad.png" alt="enemad">
+                    </li>
+                    <li>
+                        <img src="/assets/images/home/nemad.png" alt="nemad">
+                    </li>
+                </ul>
+                    
+            </div>
+
+        </div>
+
+        <div class="text-center -mt-16 z-1 pb-8 pt-24 bg-gradient-to-l from-secondary-2 to-secondary relative before:absolute before:inset-0 before:bg-footer-pattern before:bg-cover before:bg-center before:-z-1">
+
+          <h6 class="text-white/90">کليه حقوق اين سایت متعلق به <a href="#" class="text-white font-semibold">شرکت هواراد صنعت نیکان</a> می‌باشد</h6>
+
+        </div>
+
+      </footer>

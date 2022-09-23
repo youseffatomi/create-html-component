@@ -1,0 +1,55 @@
+<section class="container mt-20">
+
+    <div class="flex items-center justify-center gap-5 mb-10">
+      <img src="/assets/images/patterns/title-divider.png" class="rotate-180" alt="divider">
+      <h3 class="font-medium text-dark-80 text-3xl">محصولات ما</h3>
+      <img src="/assets/images/patterns/title-divider.png" alt="divider">
+
+    </div>
+
+
+    
+
+<% const list = [
+{
+    "image" : "/assets/images/upload/category01.png",
+    "title": "درایر (خشک کن)",
+},
+{
+    "image" : "/assets/images/upload/category02.png",
+    "title": "کمپرسور",
+},
+{
+    "image" : "/assets/images/upload/category01.png",
+    "title": "درایر (خشک کن)",
+},
+{
+    "image" : "/assets/images/upload/category02.png",
+    "title": "کمپرسور",
+},
+] %> 
+
+
+
+    <div class="flex mt-24">
+
+      <% list.forEach((item) => { %>
+
+
+      <div class="flex flex-col gap-5 items-center w-1/4 px-10">
+        <div class="relative w-full">
+          <div class="rounded-full before:rounded-full before:-z-1 relative w-full pt-1 aspect-square before:block before:absolute before:inset-0 bg-category-pattern bg-contain before:bg-gradient-to-l before:from-primary-2 before:to-primary">
+            <img src="<%= item.image %>" class="z-1 mx-auto -mt-12 w-10/12" alt="<%= item.image %>">
+          </div>              
+        </div>
+        <h4 class="text-dark-80 font-medium text-2xl"><%= item.title %></h4>
+      </div>
+
+      <% }) %>
+
+
+    </div>
+
+
+
+  </section>

@@ -2,3 +2,21 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+    body {
+        @apply bg-light font-primary;
+    }
+}
+
+@layer components {
+    .btn { 
+        @apply transition-all duration-300 overflow-hidden relative hover:bg-transparent hover:before:opacity-100 before:-z-1 before:absolute before:inset-0 before:bg-gradient-to-l before:transition-all before:duration-300 before:opacity-0 font-medium block rounded-xl py-3 ;
+        &.btn-primary {
+            @apply hover:text-dark-80 before:from-primary-2 before:to-primary text-primary-text bg-primary-2/20;
+        }
+        &.btn-secondary {
+            @apply hover:text-white before:from-secondary-2 before:to-secondary text-secondary-2 bg-secondary-2/20;
+        }
+    }
+}

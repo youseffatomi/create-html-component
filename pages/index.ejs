@@ -1,7 +1,36 @@
 <!DOCTYPE html>
-<html lang="fa">
-  <%- include("./../components/layout/head") %>
-  <body class="bg-slate-800 grid place-items-center h-screen">
-    <h1 class="text-7xl text-white">create-html-components</h1>
+<html lang="fa" dir="rtl">
+  <%- include("./../components/layout/head", {title: "بهترین‌های صنعت هوا فـشـرده را از ما بـخـواهیـد"}) %>
+  <body>
+
+      <%- include("./../components/main/header", {currentRoute: "home"}) %> 
+      
+      <%- include("./../components/main/hiro") %> 
+    
+      
+      <%- include("./../components/home/services") %> 
+      
+      
+      <%- include("./../components/home/categories") %> 
+      
+
+      <%- include("./../components/home/detail-section") %> 
+
+      <%- include("./../components/home/product-section", {title: "پر  فروش  ترین محصولات", gradient: "from-primary-2 to-primary", color:"text-primary", productBtn: "btn-primary"}) %> 
+
+
+      <%- include("./../components/home/banners") %> 
+
+
+      <%- include("./../components/home/detail-video") %> 
+
+
+      <%- include("./../components/home/product-section", {title: "جدید ترین محصولات", gradient: "from-secondary-2 to-secondary", color: "text-secondary", productBtn: "btn-secondary"}) %> 
+
+
+
+      <%- include("./../components/main/footer") %> 
+
+
   </body>
 </html>

@@ -1,0 +1,36 @@
+
+
+<% const services = [
+    {
+        "icon" : "chat",
+        "title": "مشاوره",
+        "description": "راهنمایی شما در کوتاه‌ترین زمان",
+    },
+    {
+        "icon" : "headphone",
+        "title": "خدمات پس از فروش",
+        "description": "برای تمامی محصولات",
+    },
+    {
+        "icon" : "service",
+        "title": "تعمیر",
+        "description": "انواع سیستم‌های هوای فشرده",
+    },
+] %> 
+
+
+
+<section class="container flex items-center gap-20 mt-20">
+    <% services.forEach((item) => { %>
+        <div class="flex-1 flex items-center gap-3  group">
+        <span class="rounded-full overflow-hidden relative group-hover:bg-transparent duration-300 transition-all bg-dark-20 p-5 group-hover:before:opacity-100 before:-z-1  text-white before:block before:absolute before:opacity-0 before:inset-0 before:transition-all before:duration-300 before:bg-gradient-to-l before:from-primary-2 before:to-primary">
+            <%- include("../main/icon", {className: "w-8 h-8 z-1", name: item.icon}) %> 
+        </span>
+        <div class="flex flex-col">
+            <span class="text-dark-80 text-2xl"><%= item.title %></span>
+            <span class="text-dark-50 text-xl"><%= item.description %></span>
+        </div>
+        </div>
+    <% }) %>
+
+  </section>

@@ -1,30 +1,81 @@
-@font-face {
-  font-family: FontWeb;
-  font-style: normal;
-  font-weight: 100;
-  src: url("./../assets/fonts/woff/vazir-Thin.woff") format("woff"),
-    url("./../assets/fonts/ttf/vazir-Thin.ttf") format("ttf");
-}
 
 @font-face {
-  font-family: FontWeb;
+  font-family: iransans;
   font-style: normal;
-  font-weight: 300;
-  src: url("./../assets/fonts/woff/vazir-Light.woff") format("woff"),
-    url("./../assets/fonts/ttf/vazir-Light.ttf") format("ttf");
+  font-weight: 400;
+  src: url("./../assets/fonts/iransans/woff/IRANSansX-Regular.woff") format("woff"),
+    url("./../assets/fonts/iransans/woff2/IRANSansX-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: FontWeb;
+  font-family: iransans;
   font-style: normal;
   font-weight: 500;
-  src: url("./../assets/fonts/woff/vazir-Medium.woff") format("woff"),
-    url("./../assets/fonts/ttf/vazir-Medium.ttf") format("ttf");
+  src: url("./../assets/fonts/iransans/woff/IRANSansX-Medium.woff") format("woff"),
+    url("./../assets/fonts/iransans/woff2/IRANSansX-Medium.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: FontWeb;
+  font-family: iransans;
   font-style: normal;
   font-weight: bold;
-  src: url("./../assets/fonts/woff/vazir-Bold.woff") format("woff"),
-    url("./../assets/fonts/ttf/vazir-Bold.ttf") format("ttf");
+  src: url("./../assets/fonts/iransans/woff/IRANSansX-Bold.woff") format("woff"),
+    url("./../assets/fonts/iransans/woff2/IRANSansX-Bold.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: 800;
+  src: url("./../assets/fonts/iransans/woff/IRANSansX-ExtraBold.woff") format("woff"),
+    url("./../assets/fonts/iransans/woff2/IRANSansX-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: 900;
+  src: url("./../assets/fonts/iransans/woff/IRANSansX-Black.woff") format("woff"),
+    url("./../assets/fonts/iransans/woff2/IRANSansX-Black.woff2") format("woff2");
+}
+
+
+
+@font-face {
+  font-family: peyda;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../assets/fonts/peyda/woff/PeydaWeb-Regular.woff") format("woff"),
+  url("./../assets/fonts/peyda/woff2/PeydaWeb-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: peyda;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./../assets/fonts/peyda/woff/PeydaWeb-Medium.woff") format("woff"),
+    url("./../assets/fonts/peyda/woff2/PeydaWeb-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: peyda;
+  font-style: normal;
+  font-weight: bold;
+  src: url("./../assets/fonts/peyda/woff/PeydaWeb-Bold.woff") format("woff"),
+    url("./../assets/fonts/peyda/woff2/PeydaWeb-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: peyda;
+  font-style: normal;
+  font-weight: 800;
+  src: url("./../assets/fonts/peyda/woff/PeydaWeb-ExtraBold.woff") format("woff"),
+    url("./../assets/fonts/peyda/woff2/PeydaWeb-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: peyda;
+  font-style: normal;
+  font-weight: 900;
+  src: url("./../assets/fonts/peyda/woff/PeydaWeb-Black.woff") format("woff"),
+    url("./../assets/fonts/peyda/woff2/PeydaWeb-Black.woff2") format("woff2");
+}
+

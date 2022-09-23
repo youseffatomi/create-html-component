@@ -1,0 +1,66 @@
+
+<% const links = [
+{
+    "text": "صفحه اصلی",
+    "link": "/",
+    "name": "home",
+},
+{
+    "text": "محصولات",
+    "link": "/",
+    "name": "products",
+},
+{
+    "text": "درباره ما",
+    "link": "/",
+    "name": "about",
+},
+{
+    "text": "ارتباط با ما",
+    "link": "/",
+    "name": "contact",
+},
+] %> 
+
+<header class="bg-white text-dark-50 bg-header-pattern bg-left-top bg-no-repeat">
+    <div class="container flex items-center py-12">
+      <div class="flex-1">
+        <a href="/" aria-label="havarad logo"><img src="/assets/images/brand/logo.png" alt="havarad logo"></a>
+      </div>
+      <div class="grow">
+        <ul class="flex items-center justify-center gap-16">
+            <% links.forEach((item) => { %>
+                <li class="<%= item.name === currentRoute ? "text-secondary" : "" %>"><a class="transition duration-300 hover:text-secondary" href="<%= item.link %>"><%= item.text %></a></li>
+            <% }) %>
+        </ul>
+      </div>
+      <div class="flex-1 flex items-center justify-end gap-3">
+        
+        <div class="flex flex-col items-end text-sm	">
+            <a href="tel:02634460071" class="hover:text-secondary transition-all duration-300">۰۲۶-۳۴۴۶۰۰۷۱</a>
+            <a href="tel:02634460072" class="hover:text-secondary transition-all duration-300">۰۲۶-۳۴۴۶۰۰۷۲</a>
+        </div>
+
+        
+        <a href="#" class="w-8 h-8 transition-all duration-300 hover:text-secondary">
+            <%- include('icon', {className: "w-8 h-8", name: "phone"}) %>
+        </a>
+
+        <span class="w-0.5 bg-dark-20 rounded h-7"></span>
+
+        <a href="#" class="w-8 h-8 transition-all duration-300 hover:text-secondary">
+            <%- include('icon', {className: "w-8 h-8", name: "instagram"}) %>
+        </a>
+
+      </div>
+    </div>
+  </header>
+  
+  <div class="container flex justify-center -mt-6">
+    <form class="w-5/12 bg-white rounded-2xl flex overflow-hidden shadow-search">
+        <button class="flex items-center justify-center shrink-0 py-3 px-3.5 text-white bg-secondary hover:bg-secondary-2 transition-all duration-300">
+            <%- include('icon', {className: "w-6 h-6 opacity-90", name: "search"}) %>
+        </button>
+        <input type="text" class="grow outline-none px-5 py-3 placeholder:text-dark-30" placeholder="عبارت مورد نظر خود را جستجو کنید...">
+    </form>
+</div> 
